@@ -15,11 +15,11 @@ const PORT = process.env.PORT || 4000
 // middleware
 app.use(express.json())
 app.use(cookieParser())
-const allowedOrigins = [process.env.FRONTEND_URI1, process.env.FRONTEND_URI2];
+
 
   app.use(
     cors({
-      origin: process.env.FRONTEND_URI, 
+    origin: ['https://next-f-s9u8.vercel.app', 'https://next-f-hazel.vercel.app'],
       credentials: true,           
       methods: 'GET, POST, PUT, DELETE',
       allowedHeaders: ['Content-Type', 'Authorization']
